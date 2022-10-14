@@ -42,6 +42,41 @@ class _MyAppState extends State<MyApp> {
                   ],
                 ),
               ),
+              drawer: Drawer(
+                // Add a ListView to the drawer. This ensures the user can scroll
+                // through the options in the drawer if there isn't enough vertical
+                // space to fit everything.
+                child: ListView(
+                  // Important: Remove any padding from the ListView.
+                  padding: EdgeInsets.zero,
+                  children: const [
+                    DrawerHeader(
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                      ),
+                      child: UserAccountsDrawerHeader(
+                        accountName: Text('Muath'),
+                        accountEmail: Text('Muath@gmail.com'),
+                        currentAccountPicture: CircleAvatar(
+                          child: Text('M'),
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text('all tasks'),
+                      subtitle: Text('complete and in comlete'),
+                      leading: Text('items'),
+                      trailing: Text('items'),
+                    ),
+                    ListTile(
+                      title: Text('complete'),
+                      subtitle: Text('incomplete tasks only'),
+                      leading: Text('items'),
+                      trailing: Text('items'),
+                    ),
+                  ],
+                ),
+              ),
               body: const TabBarView(
                 children: [
                   All(),

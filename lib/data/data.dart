@@ -4,5 +4,5 @@ List<Map<String, dynamic>>? data = [
   {'text': 'eating', 'val': true},
   {'text': 'sleeping', 'val': true},
   {'text': 'coding', 'val': true},
-  {'text': 'playing', 'val': true}
+  {'text': 'playing', 'val': true},
 ];
